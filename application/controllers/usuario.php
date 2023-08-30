@@ -17,38 +17,17 @@ function __construct()
 		$this->load->view('V_usuario', $this->data);
 	}
 
-    function insertar(){
-        $password= $this->input->post('pass');
-        $decod = base64_decode($password);
-
-        $data = array(
-            'usuario_nombre' => $this->input->post('nombre'),
-            'usuario_apellido' => $this->input->post('apellido'),
-            'usuario_correo' => $this->input->post('correo'),
-            'usuario_pass' => sha1($decod),    
-            'usuario_estado' => $this->input->post('estado') ,  
-            'usuario_rol_id' => $this->input->post('rol')    
-        );
-    
-        $this->usuarioModel->insertarUsuario($data);
-        redirect('usuario/index');
-
-
-    }
-
     function guardarEdicion(){
-        $password= $this->input->post('ed_pass');
+        $password= $this->input->post('ed_pasword');
         $decod = base64_decode($password);
-
         $data = array(
             'usuario_nombre' => $this->input->post('ed_nombre'),
             'usuario_apellido' => $this->input->post('ed_apellido'),
             'usuario_correo' => $this->input->post('ed_correo'),
-            'usuario_pass' => sha1($decod),    
+            'usuario_pasword' => sha1($decod),    
             'usuario_estado' => $this->input->post('ed_estado') ,  
             'usuario_rol_id' => $this->input->post('ed_rol')
         );
-
         $id = $this-> input->post('usuario_id');
         $this->usuarioModel->modificarUsuario($data,$id);
         redirect('usuario/index');
