@@ -74,34 +74,3 @@ body {
     border: 1px solid #c3e6cb;
     margin-top: 10px;
 }
-.recibo {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.titulo {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.detalle {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.detalle:last-child {
-    border-bottom: none;
-}
-
-.descripcion {
-    font-weight: bold;
-}
-
-.precio {
-    float: right;
-}

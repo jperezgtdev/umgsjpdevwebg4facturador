@@ -11,15 +11,17 @@
 </head>
 
 <body>
-    <button class="btn btn-secondary mt-4" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
-    <div class="recibo">
+<button class="btn btn-secondary mt-4 ml-2" style="position: absolute; left: 0; top: 0;" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
+<button type="submit" class="btn btn-primary" style="position: absolute; right: 0; top: 0;">Buscar</button>
+ <div class="recibo">
         <div class="titulo">Recibo de Venta</div>
         <form action="<?php echo site_url('buscar_detalle_venta'); ?>" method="post">
             <div class="form-group">
-                <label for="detalle_Venta_id">Buscar por detalle_Venta_id:</label>
-                <input type="text" name="detalle_Venta_id" id="detalle_Venta_id" class="form-control">
+              
+                <input type="text" name="detalle_Venta_id" id="detalle_Venta_id" class="form-control" style="position: absolute; right: 0; top: 75px; width: 150px; font-size: 14px;">
+
             </div>
-            <button type="submit" class="btn btn-primary">Buscar</button>
+            
         </form>
         <?php if (isset($detalles) && !empty($detalles)): ?>
             <?php foreach ($detalles as $detalle): ?>
