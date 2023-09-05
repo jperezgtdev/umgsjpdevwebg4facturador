@@ -39,9 +39,12 @@ class Login extends CI_Controller
             } else {
                 $login_error['login_error'] = "Credenciales incorrectas. Inténtalo de nuevo.";
             }
-            
+
             $this->load->view('V_login', $login_error);
-            
+            echo '<script>';
+            echo 'setTimeout(function () { window.location.href = "' . site_url('login/index') . '"; }, 2000);';   
+            echo '</script>';
+
         } else {
             $this->load->view('V_login');
         }
@@ -60,11 +63,11 @@ class Login extends CI_Controller
             'usuario_estado' => $this->input->post('estado'),
             'usuario_rol_id' => $this->input->post('rol')
         );
-        
+
         $usuario_nombre = $this->input->post('nombre');
         $usuario_apellido = $this->input->post('apellido');
 
-    // Insertar un registro en la tabla Cliente con la información del usuario
+        // Insertar un registro en la tabla Cliente con la información del usuario
         $cliente_data = array(
             'Cliente_name' => $usuario_nombre,
             'Cliente_apellido' => $usuario_apellido
@@ -73,16 +76,16 @@ class Login extends CI_Controller
         $this->loginModel->insertarUsuario($data);
 
         $registration_success['registration_success'] = "Usuario registrado exitosamente para : " . $this->input->post('email');
-        
+
         // Carga la vista con el mensaje
         $this->load->view('V_login', $registration_success);
-       // redirect('login/index');
+        // redirect('login/index');
     }
 
     public function logout()
-{
-    $this->session->unset_userdata('user'); // Elimina los datos de sesión
-    $this->session->sess_destroy(); // Destruye la sesión
-    redirect('login/index'); // Redirige al inicio de sesión
-}
+    {
+        $this->session->unset_userdata('user'); // Elimina los datos de sesión
+        $this->session->sess_destroy(); // Destruye la sesión
+        redirect('login/index'); // Redirige al inicio de sesión
+    }
 }

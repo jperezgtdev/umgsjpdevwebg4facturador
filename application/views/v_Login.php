@@ -31,11 +31,11 @@
                       <div class="section text-center">
                         <h4 class="mb-4 pb-3">Ingresar</h4>
                         <div class="form-group">
-                          <input type="email" class="form-style" name="email" placeholder="Email">
+                          <input autocomplete="off" type="email" class="form-style" name="email" placeholder="Email" required>
                           <i class="input-icon uil uil-at"></i>
                         </div>
                         <div class="form-group mt-2">
-                          <input type="password" class="form-style" name="password" placeholder="Password">
+                          <input autocomplete="off" type="password" class="form-style" name="password" placeholder="Password" required>
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
                         <button type="submit" class="btn mt-4">Ingresar</button>
@@ -57,11 +57,11 @@
                     <h4 class="mb-3 pb-3">Registrarse</h4>
                     <form action="<?php echo site_url('login/newregistro'); ?>" method="post">
                       <div class="form-group">
-                        <input type="text" class="form-style" name="nombre" id="nombre" required placeholder="Nombre">
+                        <input autocomplete="off" type="text" class="form-style" name="nombre" id="nombre" required placeholder="Nombre">
                         <i class="input-icon uil uil-user"></i>
                       </div>
                       <div class="form-group mt-2">
-                        <input type="text" class="form-style" name="apellido" id="apellido" required
+                        <input autocomplete="off" type="text" class="form-style" name="apellido" id="apellido" required
                           placeholder="Apellido">
                         <i class="input-icon uil uil-user"></i>
                       </div>
@@ -77,19 +77,19 @@
                       </div>
                       <div class="form-group mt-2">
                         <select class="form-select" name="estado" id="estado" required>
-                          <option value="">Seleccione estado</option>
-                          <option value="1">Activo</option>
-                          <option value="0">Inactivo</option>
+                          <option value="" disabled>Seleccione estado</option>
+                          <option value="1"selected>Activo</option>
+                          <option value="2" disabled>Inactivo</option>
                         </select>
                       </div>
                       <div class="form-group mt-2">
-                        <select class="form-select" name="rol" id="rol" required>
-                          <option value="0">Seleccione un rol</option>
-                          <option value="1">Administrador</option>
-                          <option value="2">Normal</option>
-                          <option value="3">Editor</option>
-                          <option value="4">Invitado</option>
-                          <option value="5">Moderador</option>
+                          <select class="form-select" name="rol" id="rol" required>
+                            <option value="0">Seleccione un rol</option>
+                            <option value="1"disabled>Administrador</option>
+                            <option value="2">Normal</option>
+                            <option value="3"disabled>Editor</option>
+                            <option value="4"selected>Invitado</option>
+                            <option value="5"disabled>Moderador</option>
                         </select>
                       </div>
                       <button class="btn btn-primary mt-2" type="submit" class="btn mt-4">Register</button>

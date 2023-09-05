@@ -16,7 +16,7 @@ function __construct()
 		return $query->result();
 	}
 	public function modificarUsuario($data, $id) {
-		$this->db->where('id_usuario', $id);
+		$this->db->where('usuario_id', $id);
 		$this->db->update('usuario', $data);
 	
 	}
@@ -31,6 +31,14 @@ function __construct()
 		$query = $this->db->get();
 		return $query->result();
 	}
+	public function getUsuarioById($usuarioId){
+		$this->db->select('usuario_id, usuario_nombre, usuario_apellido, usuario_email, usuario_password, usuario_estado, usuario_rol_id');
+		$this->db->from('usuario');
+		$this->db->where('usuario_id', $usuarioId);
+		$query = $this->db->get();
+		return $query->row();
+	}
+	
 	
 	
 	

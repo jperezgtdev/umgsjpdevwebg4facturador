@@ -6,6 +6,7 @@
 </head>
 <body>
 <div class="container mt-5">
+<button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
     <h2>Ingreso de Productos</h2>
     <form action="<?php echo site_url('producto/agregar')?>" method="post">
     <div class="form-group">

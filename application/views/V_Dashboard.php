@@ -8,8 +8,9 @@
 </head>
 
 <body>
+	<div class=form-group>
 	<button onclick="location.href='<?php echo site_url('login/logout'); ?>'">Cerrar Sesion</button>
-	
+	</div>
 	<h1>Catálogo de Opciones</h1>
 
 	<p>Elige una opción:</p>
@@ -17,5 +18,6 @@
 	<button class ="mb-2"onclick="location.href='<?php echo site_url('usuario/index'); ?>'">Modificación / Eliminación de Usuarios Registrados</button> <!--redireccion al sitio-->
 	<button class ="mb-2" onclick="location.href='<?php echo site_url('venta/index');?>'">Iniciar Proceso Venta</button>
 	<button class ="mb-2" onclick="location.href='<?php echo site_url('producto/index');?>'">Ingreso de Productos</button>	
+	<button class ="mb-2" onclick="location.href='<?php echo site_url('TicketController/index');?>'">Reimpresion de ticket</button>
 </body>	
 </html>
