@@ -69,7 +69,7 @@ class Login extends CI_Controller
 
         // Insertar un registro en la tabla Cliente con la información del usuario
         $cliente_data = array(
-            'Cliente_name' => $usuario_nombre,
+            'Cliente_nombre' => $usuario_nombre,
             'Cliente_apellido' => $usuario_apellido
         );
         $this->loginModel->insertarCliente($cliente_data);
