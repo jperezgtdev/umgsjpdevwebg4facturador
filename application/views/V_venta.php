@@ -23,7 +23,7 @@
                 <select name="cliente" id="cliente" class="form-style" required>
                     <option value="">Seleccione un cliente</option>
                     <?php foreach($clientes as $cliente): ?>
-                        <option value="<?php echo $cliente->cliente_id; ?>"><?php echo $cliente->cliente_nombre; ?> <?php echo $cliente->cliente_apellido; ?></option>
+                        <option value="<?php echo $cliente->cliente_id; ?>"><?php echo $cliente->cliente_name; ?> <?php echo $cliente->cliente_apellido; ?></option>
                     <?php endforeach; ?>
                 </select>
             <label>Metodo Pago</label>
