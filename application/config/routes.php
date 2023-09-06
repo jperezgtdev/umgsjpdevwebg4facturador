@@ -53,4 +53,10 @@ $route['default_controller'] = 'Login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['usuario'] = 'Login/usuario'; // 'usuario' es la URL amigable, 'Login' es el nombre del controlador y 'usuario' es el método
+$route['proveedor'] = 'V_Proveedor';
+$route['pedidos'] = 'V_Pedidos';
+$route['actualizar/(:num)'] = 'actualizar/index/$123';
+
+
+
 

@@ -19,5 +19,15 @@
 	<button class ="mb-2" onclick="location.href='<?php echo site_url('venta/index');?>'">Iniciar Proceso Venta</button>
 	<button class ="mb-2" onclick="location.href='<?php echo site_url('producto/index');?>'">Ingreso de Productos</button>	
 	<button class ="mb-2" onclick="location.href='<?php echo site_url('TicketController/index');?>'">Reimpresion de ticket</button>
+	<button class ="mb-2" onclick="location.href='<?php echo site_url('proveedor/index');?>'">Ingreso de Proveedores y Pedido</button>
+	<button class ="mb-2" onclick="location.href='<?php echo site_url('pedidos/index');?>'">Ingreso de Pedidos de Compras</button>
+	<button class ="mb-2" onclick="location.href='<?php echo site_url('actualizar/index/1');?>'">Actualizar Usuario</button>
+
+
+
+
+
+
+
 </body>	
 </html>
