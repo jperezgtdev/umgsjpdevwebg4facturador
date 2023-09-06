@@ -12,9 +12,18 @@ class TicketController extends CI_Controller{
         $data['detalles'] = $this->TicketModel->getDetalle();
         $this->load->view('V_ticket', $data);
     }
+
+    public function buscar_detalle_venta() {
+        $detalle_Venta_id = $this->input->post('detalle_Venta_id');
+        $data['detalles'] = $this->TicketModel->buscar_detalle_venta_por_factura($detalle_Venta_id);
+        $this->load->view('V_ticket', $data);
 }
 
 
+
+
+
+}
 
 
 ?>
