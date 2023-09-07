@@ -1,77 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+    <title>Registro de Ventas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url('assets/Proveedores/style.css'); ?>">
     <title>Ingreso de Pedidos de Compras</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        input, select, textarea {
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .confirmation {
-            color: green;
-            margin-top: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
+   
 </head>
 <body>
     <div class="container">
         <h1>Ingreso de Pedidos de Compras</h1>
 
         <!-- Botón de Regresar -->
-        <div style="text-align: center;">
-            <button onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
-        </div>
-
+        
+        <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
+        
+            
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <label for="nombre_cliente">Nombre del Cliente:</label>
             <input type="text" name="nombre_cliente" required>
@@ -94,7 +40,7 @@
                 <option value="compra">Compra</option>
             </select>
             
-            <button type="submit" name="submit">Ingrese Orden</button>
+            <button class="btn" type="submit" name="submit">Ingrese Orden</button>
         </form>
 
         <?php

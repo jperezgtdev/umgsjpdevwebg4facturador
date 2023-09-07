@@ -13,7 +13,7 @@
 <body>
 <div class="container mt-5">
 <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
-    <h2>Ingreso de Productos</h2>
+            <h2>Ingreso de Productos</h2>
     <form action="<?php echo site_url('producto/agregar')?>" method="post">
     <div class="form-group">
         <label for="nombre">Nombre del Producto:</label>
@@ -50,7 +50,7 @@
                     <td><?php echo $row->Producto_Proveedor_id;?></td>
                 </tr>
             <?php endforeach;?>
-            <!-- Aquí se mostrarán los productos agregados dinámicamente -->
+           
         </tbody>
     </table>
 </div>
@@ -58,7 +58,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-// Aquí sigue el mismo JavaScript que proporcioné en el ejemplo anterior
+
 </script>
 </body>
 </html>

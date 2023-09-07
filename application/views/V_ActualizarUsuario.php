@@ -1,54 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url('assets/Actualizarusuario/style.css'); ?>">
     <title>Actualizar Usuario</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: black;
-            color: green;
-        }
-        .form-control {
-            background-color: black;
-            color: green;
-            border-color: green;
-        }
-        .btn-primary {
-            background-color: green;
-            border-color: green;
-        }
-        .btn-primary:hover {
-            background-color: blue;
-            border-color: blue;
-        }
-        .table {
-            background-color: black;
-            color: green;
-            border-color: green;
-        }
-        .table th,
-        .table td {
-            background-color: black;
-            color: green;
-            border-color: green;
-        }
-        .table tbody tr:hover {
-            background-color: green;
-            color: black;
-        }
-        /* Estilo para el botón de regresar */
-        .btn-regresar {
-            background-color: green;
-            color: white;
-            border-color: green;
-        }
-        .btn-regresar:hover {
-            background-color: blue;
-            border-color: blue;
-        }
-    </style>
+   
 </head>
 <body>
     <header>
@@ -56,9 +13,8 @@
             <h1>Actualizar Usuario</h1>
 
             <!-- Botón de Regresar -->
-            <div style="text-align: center;">
-                <button class="btn btn-regresar" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
-            </div>
+            <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
+        
         </div>
     </header>
     <div class="container mt-4">

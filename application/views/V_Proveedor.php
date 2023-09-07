@@ -1,88 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url('assets/Proveedores/style.css'); ?>">
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        form {
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="date"], textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        .btn {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #45a049;
-        }
-
-        .message {
-            text-align: center;
-            color: green;
-        }
-
-        .error {
-            text-align: center;
-            color: red;
-        }
-
-        .regresar-button {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-    </style>
     <title>Ingreso de Proveedores y Pedido</title>
 </head>
 <body>
@@ -90,9 +12,9 @@
         <h2>Ingreso de Proveedores y Pedido</h2>
         
         <!-- Botón de Regresar -->
-        <div class="regresar-button">
+        
             <button class="btn" onclick="location.href='<?php echo site_url('dashboard/index'); ?>'">Regresar</button>
-        </div>
+        
 
         <!-- Formulario para ingresar proveedores y pedidos -->
         <form id="proveedorPedidoForm">
@@ -109,7 +31,7 @@
             <button type="button" class="btn" onclick="guardarDatos()">Guardar</button>
         </form>
 
-        <!-- Tabla para mostrar los datos ingresados -->
+        
         <table id="tablaDatos">
             <thead>
                 <tr>
@@ -123,11 +45,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Aquí se mostrarán los datos ingresados -->
+                
             </tbody>
         </table>
 
-        <!-- Script JavaScript para capturar y mostrar los datos -->
         <script>
             function guardarDatos() {
                 const nombre = document.getElementsByName("nombre")[0].value;
