@@ -31,6 +31,25 @@ class PedidosModel extends CI_Model {
 
         if ($stmt->execute()) {
             $stmt->close();
+
+            // Almacenar los datos también en la sesión
+            $orden = array(
+                'nombre_cliente' => $nombreCliente,
+                'producto' => $producto,
+                'descripcion' => $descripcion,
+                'cantidad' => $cantidad,
+                'precio' => $precio,
+                'tipo' => $tipo
+            );
+
+            // Iniciar sesión si no está iniciada
+            if (!isset($_SESSION)) {
+                session_start();
+            }
+
+            // Agrega la orden al arreglo de órdenes en la sesión
+            $_SESSION['ordenes'][] = $orden;
+
             return "Orden de compra ingresada exitosamente.";
         } else {
             $stmt->close();

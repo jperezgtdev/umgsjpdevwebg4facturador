@@ -3,9 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Proveedor extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('ProveedorModel'); // Carga el modelo en el constructor
+    }
+
     public function index() {
-        
-        $this->load->view('V_Proveedor'); // Cambia el nombre del modelo si es necesario
+        $this->load->view('V_Proveedor');
     }
 
     public function insertarProveedor() {
@@ -39,4 +43,3 @@ class Proveedor extends CI_Controller {
     }
 }
 ?>
-
