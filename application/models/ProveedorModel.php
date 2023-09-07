@@ -14,7 +14,7 @@ class ProveedorModel extends CI_Model {
             'telefono' => $telefono
         );
 
-        $this->db->insert('proveedores', $data);
+        $this->db->insert('proveedores', $data); // Asegúrate de que 'proveedores' sea el nombre correcto de tu tabla
         return $this->db->affected_rows() > 0;
     }
 
@@ -25,7 +25,7 @@ class ProveedorModel extends CI_Model {
             'descripcion' => $descripcion
         );
 
-        $this->db->insert('pedidos', $data);
+        $this->db->insert('pedidos', $data); // Asegúrate de que 'pedidos' sea el nombre correcto de tu tabla
         return $this->db->affected_rows() > 0;
     }
 }
