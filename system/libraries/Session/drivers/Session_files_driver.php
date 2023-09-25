@@ -99,6 +99,7 @@ class CI_Session_files_driver extends CI_Session_driver implements CI_Session_dr
 	 * @param	array	$params	Configuration parameters
 	 * @return	void
 	 */
+	
 	public function __construct(&$params)
 	{
 		parent::__construct($params);

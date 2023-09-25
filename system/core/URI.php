@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/libraries/uri.html
  */
+#[\AllowDynamicProperties]
 class CI_URI {
 
 	/**
@@ -99,6 +100,7 @@ class CI_URI {
 	 */
 	public function __construct()
 	{
+
 		$this->config =& load_class('Config', 'core');
 
 		// If query strings are enabled, we don't need to parse any segments.
